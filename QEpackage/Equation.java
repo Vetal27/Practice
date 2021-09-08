@@ -20,10 +20,7 @@ public class Equation {
         try {
             double d = b * b - 4 * a * c;
             if (d < 0) {
-                throw new ArithmeticException();
-            }
-            if (a == 0) {
-                throw new ArithmeticException();
+                throw new ArithmeticException("Немає розв'язків");
             }
             if (d == 0) {
                 result = (-b) / (2 * a);
