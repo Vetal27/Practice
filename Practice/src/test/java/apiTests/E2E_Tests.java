@@ -16,7 +16,7 @@ import org.junit.Test;
 public class E2E_Tests {
 
     @Test
-    public void CheckFilmsCount()
+    public void сheckFilmsCount()
     {
         RestAssured.baseURI ="https://swapi.dev/api";
         RequestSpecification httpRequest = RestAssured.given();
@@ -28,7 +28,7 @@ public class E2E_Tests {
     }
 
     @Test
-    public void CheckDirectorOfFirstFilm()
+    public void сheckDirectorOfFirstFilm()
     {
         RestAssured.baseURI ="https://swapi.dev/api";
         RequestSpecification httpRequest = RestAssured.given();
