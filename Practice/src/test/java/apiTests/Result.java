@@ -1,17 +1,23 @@
 package apiTests;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Result {
     private String title;
-    private int episode_id;
-    private String opening_crawl;
+    @JsonProperty("episode_id")
+    private int episodeId;
+    @JsonProperty("opening_crawl")
+    private String openingCrawl;
     private String director;
     private String producer;
-    private String release_date;
+    @JsonProperty("release_date")
+    private String releaseDate;
     private List<String> characters;
     private List<String> planets;
     private List<String> starships;
