@@ -33,7 +33,7 @@ public class Equation {
             }
         }
         catch (ArithmeticException e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
             System.out.println("Немає розв'язків");
         }
         return answer;
