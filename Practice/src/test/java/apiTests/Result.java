@@ -21,7 +21,7 @@ public class Result {
     private List<String> characters;
     private List<String> planets;
     private List<String> starships;
-    private List <String> vehicles;
+    private List<String> vehicles;
     private List<String> species;
     private String created;
     private String edited;
