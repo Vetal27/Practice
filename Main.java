@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.LongSummaryStatistics;
 import java.util.OptionalDouble;
 import java.util.stream.Collectors;
-import java.util.stream.DoubleStream;
 
 public class Main {
     public static void main(String[] args) {
+        //SubTask 1
         System.out.println("TASK 1");
         List<String> list = Arrays.asList("df", "", "sfsfsf", "", "sfsfsf", "fffff");
         long countEmpty = list.stream()
@@ -32,6 +32,7 @@ public class Main {
                 .collect(Collectors.toList());
         System.out.println(listMoreThanThreeSymbol);
 
+        //SubTask 2
         System.out.println("TASK 2");
         List<String> characters = Arrays.asList("Gandalf", "Aragorn", "Legolas", "Saruman", "Gollum", "Bilbo", "Frodo", "Gimli");
         List<String> charactersChanges = characters.stream()
@@ -40,6 +41,7 @@ public class Main {
         String collect = charactersChanges.stream().collect(Collectors.joining(", "));
         System.out.println(collect);
 
+        //SubTask 3
         System.out.println("TASK 3");
         List<Integer> listOfNumbers = Arrays.asList(1, 19, 9, 10, 19, 3, 4, 7, 3, 4, 32, 11, 7);
         List<Integer> listOfSquareNumbers = listOfNumbers.stream()
@@ -48,6 +50,7 @@ public class Main {
                 .collect(Collectors.toList());
         System.out.println(listOfSquareNumbers);
 
+        //SubTask 4(1)
         System.out.println("TASK 4");
         int max = listOfNumbers.stream()
                 .max(Integer::compare).get();
@@ -64,6 +67,7 @@ public class Main {
                 .average();
         System.out.println("Середнє арифметичне: " + average);
 
+        //SubTask 4(2)
         LongSummaryStatistics stats = listOfNumbers.stream()
                 .mapToLong(x -> x)
                 .summaryStatistics();
